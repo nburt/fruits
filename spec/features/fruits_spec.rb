@@ -38,4 +38,10 @@ feature 'Managing Fruits' do
       expect(page).to have_content 'red'
     end
   end
+
+  scenario 'can delete existing fruits' do
+    click_link 'Banana'
+    click_button 'Delete Fruit'
+    expect(page).to_not have_content 'Banana'
+  end
 end

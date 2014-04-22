@@ -34,4 +34,10 @@ class FruitsController < ApplicationController
     redirect_to "/fruits"
   end
 
+  def destroy
+    Fruit.destroy(params[:id])
+
+    redirect_to "/fruits"
+  end
+
 end

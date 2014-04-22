@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   put "/fruits/:id", to: "fruits#update"
 
+  #get "/fruits/:id/delete", to: "fruits#"
+
+  delete "/fruits/:id", to: "fruits#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

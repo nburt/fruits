@@ -1,3 +1,7 @@
 <h1><%= @fruit[:name] %></h1>
 <p><%= @fruit[:description] %></p>
 <a href="/fruits/<%= @fruit[:id] %>/edit">Edit Fruit</a>
+<form action="/fruits/<%= @fruit[:id] %>" method="post">
+  <input type="hidden" name="_method" value="delete"/>
+  <button type="submit">Delete Fruit</button>
+</form>
