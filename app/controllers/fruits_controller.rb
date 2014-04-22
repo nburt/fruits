@@ -20,4 +20,8 @@ class FruitsController < ApplicationController
     @fruits = Fruit.all
   end
 
+  def view
+    @fruit = Fruit.find(params[:id])
+  end
+
 end

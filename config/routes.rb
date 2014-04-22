@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get "/fruits", to: "fruits#fruits"
 
+  get "/fruits/:id", to: "fruits#view"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
