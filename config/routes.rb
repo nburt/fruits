@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  get "/", to: "fruits#index"
+
+  get "/fruits/new", to: "fruits#new"
+
+  post "/fruits", to: "fruits#create"
+
+  get "/fruits", to: "fruits#fruits"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

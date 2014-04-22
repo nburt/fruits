@@ -1,0 +1,7 @@
+<h1>All the Fruits!</h1>
+<a href="/fruits/new">Create Another Fruit</a>
+<ul>
+  <% @fruits.each do |fruit| %>
+    <li>Name: <%= fruit[:name] %></li>
+  <% end %>
+</ul>
