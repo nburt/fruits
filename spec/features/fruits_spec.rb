@@ -22,4 +22,20 @@ feature 'Managing Fruits' do
       expect(page).to have_content 'yellow'
     end
   end
+
+  scenario 'can edit existing fruits' do
+    click_link 'Banana'
+    click_link 'Edit Fruit'
+    fill_in 'name', :with => 'Apple'
+    fill_in 'description', :with => 'red'
+    click_button 'Edit Fruit'
+    expect(page).to_not have_content 'Banana'
+    click_link 'Apple'
+    within 'h1' do
+      expect(page).to have_content 'Apple'
+    end
+    within 'p' do
+      expect(page).to have_content 'red'
+    end
+  end
 end

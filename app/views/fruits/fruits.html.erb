@@ -2,6 +2,6 @@
 <a href="/fruits/new">Create Another Fruit</a>
 <ul>
   <% @fruits.each do |fruit| %>
-    <li><a href="/fruits/<%= fruit[:id] %>">Name: <%= fruit[:name] %></a></li>
+    <li>Name: <a href="/fruits/<%= fruit[:id] %>"><%= fruit[:name] %></a></li>
   <% end %>
 </ul>

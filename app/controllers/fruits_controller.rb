@@ -24,4 +24,14 @@ class FruitsController < ApplicationController
     @fruit = Fruit.find(params[:id])
   end
 
+  def edit
+    @fruit = Fruit.find(params[:id])
+  end
+
+  def update
+    Fruit.update(params[:id], {:name => params[:name], :description => params[:description]})
+
+    redirect_to "/fruits"
+  end
+
 end
